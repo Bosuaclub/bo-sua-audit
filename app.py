@@ -104,25 +104,3 @@ with tab2:
 # --- FOOTER ---
 st.markdown("---")
 st.caption("Developed by Bò Sữa Marketing")
-```
-
-#### BƯỚC 2: Đưa lên "Kho" (GitHub)
-1.  Bác tạo tài khoản tại [github.com](https://github.com) (nếu chưa có).
-2.  Tạo một **Repository** mới (đặt tên là `bo-sua-audit`, để chế độ Public).
-3.  Upload 2 file `app.py` và `requirements.txt` vào đó.
-
-#### BƯỚC 3: Đưa lên Web (Streamlit Cloud)
-1.  Truy cập [share.streamlit.io](https://share.streamlit.io).
-2.  Đăng nhập bằng tài khoản GitHub vừa tạo.
-3.  Bấm **"New app"** -> Chọn cái Repository `bo-sua-audit` bác vừa tạo -> Bấm **Deploy**.
-
-Lúc này Web đã chạy, nhưng nó sẽ báo lỗi vì chưa có API Key. Bác sang bước cuối cùng.
-
-#### BƯỚC 4: Cất chìa khóa vào két (Cấu hình Secrets)
-Đây là bước quan trọng để không ai trộm được tiền của bác:
-
-1.  Tại trang quản lý app của Streamlit, bấm vào dấu 3 chấm (Settings) hoặc nút **"Manage app"**.
-2.  Tìm mục **"Secrets"**.
-3.  Dán dòng này vào ô soạn thảo:
-    ```toml
-    GEMINI_API_KEY = "AIzaSyDxxxxxxxxx"
